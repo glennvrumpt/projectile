@@ -1,6 +1,6 @@
 import System from "./system.js";
 
-class MovementSystem extends System {
+class Movement extends System {
   constructor(canvas) {
     super();
     this.canvas = canvas;
@@ -31,4 +31,4 @@ class MovementSystem extends System {
   }
 }
 
-export default MovementSystem;
+export default Movement;

@@ -1,6 +1,6 @@
 import System from "./system.js";
 
-class AISystem extends System {
+class AI extends System {
   constructor() {
     super();
   }
@@ -8,4 +8,4 @@ class AISystem extends System {
   update(entities) {}
 }
 
-export default AISystem;
+export default AI;

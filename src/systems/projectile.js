@@ -3,9 +3,9 @@ import Entity from "../entities/entity.js";
 import Position from "../components/position.js";
 import Velocity from "../components/velocity.js";
 import Size from "../components/size.js";
-import Projectile from "../components/projectile.js";
+import ProjectileComponent from "../components/projectile.js";
 
-class ProjectileSystem extends System {
+class Projectile extends System {
   constructor(canvas) {
     super();
     this.canvas = canvas;
@@ -40,7 +40,7 @@ class ProjectileSystem extends System {
       )
     );
     projectile.addComponent(new Size(5, 5));
-    projectile.addComponent(new Projectile());
+    projectile.addComponent(new ProjectileComponent());
 
     return projectile;
   }
@@ -68,4 +68,4 @@ class ProjectileSystem extends System {
   }
 }
 
-export default ProjectileSystem;
+export default Projectile;

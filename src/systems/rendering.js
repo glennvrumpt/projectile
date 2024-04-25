@@ -1,6 +1,6 @@
 import System from "./system.js";
 
-class RenderingSystem extends System {
+class Rendering extends System {
   constructor(canvas) {
     super();
     this.canvas = canvas;
@@ -34,4 +34,4 @@ class RenderingSystem extends System {
   }
 }
 
-export default RenderingSystem;
+export default Rendering;

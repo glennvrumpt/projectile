@@ -1,6 +1,6 @@
 import System from "./system.js";
 
-class InputSystem extends System {
+class Input extends System {
   constructor() {
     super();
     this.keys = {};
@@ -42,4 +42,4 @@ class InputSystem extends System {
   }
 }
 
-export default InputSystem;
+export default Input;

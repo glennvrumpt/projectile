@@ -1,7 +1,3 @@
-import Entity from "./entities/entity.js";
-import Position from "./components/position.js";
-import Velocity from "./components/velocity.js";
-import Input from "./components/input.js";
 import ProjectileSystem from "./systems/projectile.js";
 import RenderingSystem from "./systems/rendering.js";
 import MovementSystem from "./systems/movement.js";

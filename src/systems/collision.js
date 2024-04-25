@@ -1,6 +1,6 @@
 import System from "./system.js";
 
-class CollisionSystem extends System {
+class Collision extends System {
   update(entities) {
     entities.forEach((entity) => {
       const projectile = entity.getComponent("Projectile");
@@ -29,4 +29,4 @@ class CollisionSystem extends System {
   }
 }
 
-export default CollisionSystem;
+export default Collision;
