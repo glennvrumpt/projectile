@@ -13,6 +13,7 @@ class Rendering extends System {
     entities.forEach((entity) => {
       const position = entity.getComponent("Position");
       const projectile = entity.getComponent("Projectile");
+      const size = entity.getComponent("Size");
 
       if (projectile) {
         this.context.fillStyle = "black";
@@ -24,10 +25,20 @@ class Rendering extends System {
       if (position && !projectile) {
         if (entity.name === "player") {
           this.context.fillStyle = "green";
-          this.context.fillRect(position.x, position.y, 20, 20);
+          this.context.fillRect(
+            position.x,
+            position.y,
+            size.width,
+            size.height
+          );
         } else if (entity.name === "enemy") {
           this.context.fillStyle = "red";
-          this.context.fillRect(position.x, position.y, 20, 20);
+          this.context.fillRect(
+            position.x,
+            position.y,
+            size.width,
+            size.height
+          );
         }
       }
     });
