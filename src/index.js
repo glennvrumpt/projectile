@@ -1,20 +1,20 @@
-import ProjectileSystem from "./systems/projectile.js";
-import RenderingSystem from "./systems/rendering.js";
-import MovementSystem from "./systems/movement.js";
 import InputSystem from "./systems/input.js";
 import AISystem from "./systems/ai.js";
+import ProjectileSystem from "./systems/projectile.js";
+import MovementSystem from "./systems/movement.js";
 import CollisionSystem from "./systems/collision.js";
+import RenderingSystem from "./systems/rendering.js";
 
 import player from "./entities/player.js";
 import enemy from "./entities/enemy.js";
 
 const canvas = document.getElementById("canvas");
-const renderingSystem = new RenderingSystem(canvas);
-const movementSystem = new MovementSystem(canvas);
 const inputSystem = new InputSystem();
 const aiSystem = new AISystem();
 const projectileSystem = new ProjectileSystem(canvas);
+const movementSystem = new MovementSystem(canvas);
 const collisionSystem = new CollisionSystem();
+const renderingSystem = new RenderingSystem(canvas);
 
 const entities = [player, enemy];
 
@@ -38,8 +38,8 @@ const mainLoop = (lastTime) => {
   inputSystem.update(entities, deltaTime);
   aiSystem.update(entities, deltaTime);
   projectileSystem.update(entities, deltaTime);
-  collisionSystem.update(entities, deltaTime);
   movementSystem.update(entities, deltaTime);
+  collisionSystem.update(entities, deltaTime);
   renderingSystem.update(entities, deltaTime);
 
   requestAnimationFrame(() => mainLoop(currentTime));
